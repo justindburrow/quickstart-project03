@@ -1,23 +1,8 @@
 import React, { useState } from 'react';
 import Todos from '../components/Todos';
 
-const TodosView = () => {
-  const [todos, setTodos] = useState([]);
+const TodosView = ({ todos, addTodo, toggleTodo, deleteTodo }) => {
   const [filter, setFilter] = useState('all');
-
-  const addTodo = (text) => {
-    setTodos([...todos, { text, completed: false }]);
-  };
-
-  const toggleTodo = (index) => {
-    const newTodos = [...todos];
-    newTodos[index].completed = !newTodos[index].completed;
-    setTodos(newTodos);
-  };
-
-  const deleteTodo = (index) => {
-    setTodos(todos.filter((_, i) => i !== index));
-  };
 
   const filteredTodos = todos.filter((todo) => {
     if (filter === 'completed') return todo.completed;
