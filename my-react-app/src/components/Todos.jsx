@@ -18,23 +18,23 @@ const Todos = ({ todos, addTodo, toggleTodo, deleteTodo, setFilter }) => {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Add a todo"
+          placeholder="Add a To Do"
         />
         <button type="submit">Add</button>
       </form>
       <p className="instructions">Click the item when completed.</p>
       <ul className="todo-list">
-        {todos.map((todo, index) => (
+        {todos.map((todo) => (
           <li
-            key={index}
+            key={todo.originalIndex}
             className={todo.completed ? 'completed' : ''}
-            onClick={() => toggleTodo(index)} // Toggles completion when the list item is clicked
+            onClick={() => toggleTodo(todo.originalIndex)} // Use the original index
           >
             <span>{todo.text}</span>
             <button
               onClick={(e) => {
                 e.stopPropagation(); // Prevents the list item click from toggling the state
-                deleteTodo(index);
+                deleteTodo(todo.originalIndex); // Use the original index
               }}
             >
               Delete

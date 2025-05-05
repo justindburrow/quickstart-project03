@@ -4,11 +4,13 @@ import Todos from '../components/Todos';
 const TodosView = ({ todos, addTodo, toggleTodo, deleteTodo }) => {
   const [filter, setFilter] = useState('all');
 
-  const filteredTodos = todos.filter((todo) => {
-    if (filter === 'completed') return todo.completed;
-    if (filter === 'incomplete') return !todo.completed;
-    return true;
-  });
+  const filteredTodos = todos
+    .map((todo, index) => ({ ...todo, originalIndex: index })) // Include the original index
+    .filter((todo) => {
+      if (filter === 'completed') return todo.completed;
+      if (filter === 'incomplete') return !todo.completed;
+      return true;
+    });
 
   return (
     <div>
