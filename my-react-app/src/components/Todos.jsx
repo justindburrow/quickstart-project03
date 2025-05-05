@@ -25,9 +25,20 @@ const Todos = ({ todos, addTodo, toggleTodo, deleteTodo, setFilter }) => {
       <p className="instructions">Click the item when completed.</p>
       <ul className="todo-list">
         {todos.map((todo, index) => (
-          <li key={index} className={todo.completed ? 'completed' : ''}>
-            <span onClick={() => toggleTodo(index)}>{todo.text}</span>
-            <button onClick={() => deleteTodo(index)}>Delete</button>
+          <li
+            key={index}
+            className={todo.completed ? 'completed' : ''}
+            onClick={() => toggleTodo(index)} // Toggles completion when the list item is clicked
+          >
+            <span>{todo.text}</span>
+            <button
+              onClick={(e) => {
+                e.stopPropagation(); // Prevents the list item click from toggling the state
+                deleteTodo(index);
+              }}
+            >
+              Delete
+            </button>
           </li>
         ))}
       </ul>
