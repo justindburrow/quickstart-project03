@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ setCurrentView }) => {
   return (
     <nav className="navbar">
-      <Link to="/todos">To Do List</Link>
-      <Link to="/contact">Contact</Link>
+      <button onClick={() => setCurrentView('todos')}>To Do List</button>
+      <button onClick={() => setCurrentView('contact')}>Contact</button>
     </nav>
   );
 };

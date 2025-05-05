@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import TodosView from './views/TodosView';
 import ContactView from './views/ContactView';
 
 const App = () => {
   const [todos, setTodos] = useState([]);
+  const [currentView, setCurrentView] = useState('todos'); // State to track the current view
 
   const addTodo = (text) => {
     setTodos([...todos, { text, completed: false }]);
@@ -25,23 +25,17 @@ const App = () => {
 
   return (
     <div>
-      <Navbar />
-      <Routes>
-        {/* Redirect the root path `/` to `/todos` */}
-        <Route path="/" element={<Navigate to="/todos" />} />
-        <Route
-          path="/todos"
-          element={
-            <TodosView
-              todos={todos}
-              addTodo={addTodo}
-              toggleTodo={toggleTodo}
-              deleteTodo={deleteTodo}
-            />
-          }
+      {/* Pass setCurrentView to Navbar to handle navigation */}
+      <Navbar setCurrentView={setCurrentView} />
+      {currentView === 'todos' && (
+        <TodosView
+          todos={todos}
+          addTodo={addTodo}
+          toggleTodo={toggleTodo}
+          deleteTodo={deleteTodo}
         />
-        <Route path="/contact" element={<ContactView />} />
-      </Routes>
+      )}
+      {currentView === 'contact' && <ContactView />}
     </div>
   );
 };

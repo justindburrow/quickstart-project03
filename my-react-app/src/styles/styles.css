@@ -15,15 +15,17 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar a {
+.navbar button {
   color: #fff8e1; /* Soft cream */
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
   transition: color 0.3s ease;
+  background: none;
+  border: none;
 }
 
-.navbar a:hover {
+.navbar button:hover {
   color: #ffe0b2; /* Light peach hover effect */
 }
 
