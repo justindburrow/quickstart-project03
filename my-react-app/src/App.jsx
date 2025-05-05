@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import TodosView from './views/TodosView';
 import ContactView from './views/ContactView';
@@ -27,6 +27,8 @@ const App = () => {
     <div>
       <Navbar />
       <Routes>
+        {/* Redirect the root path `/` to `/todos` */}
+        <Route path="/" element={<Navigate to="/todos" />} />
         <Route
           path="/todos"
           element={
