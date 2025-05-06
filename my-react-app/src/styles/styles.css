@@ -1,22 +1,22 @@
-/* General Styles */
+
 body {
   font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4e4d4; /* Retro beige background */
+  background-color: #f4e4d4; 
   color: #333;
 }
 
 .navbar {
   display: flex;
   justify-content: space-around;
-  background-color: #ff6f61; /* Retro coral */
+  background-color: #ff6f61; 
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar button {
-  color: #fff8e1; /* Soft cream */
+  color: #fff8e1; 
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
@@ -26,14 +26,14 @@ body {
 }
 
 .navbar button:hover {
-  color: #ffe0b2; /* Light peach hover effect */
+  color: #ffe0b2; 
 }
 
 .todos {
   padding: 2rem;
   max-width: 600px;
   margin: 2rem auto;
-  background: #fff8e1; /* Soft cream */
+  background: #fff8e1; 
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -50,22 +50,22 @@ body {
   padding: 0.8rem;
   margin-bottom: 1rem;
   font-size: 1rem;
-  border: 1px solid #ffab91; /* Light coral */
+  border: 1px solid #ffab91; 
   border-radius: 5px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease;
 }
 
 .todo-form input:focus {
-  border-color: #ff6f61; /* Retro coral */
+  border-color: #ff6f61; 
   outline: none;
 }
 
 .todo-form button {
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
-  background-color: #ff6f61; /* Retro coral */
-  color: #fff8e1; /* Soft cream */
+  background-color: #ff6f61; 
+  color: #fff8e1; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -73,7 +73,7 @@ body {
 }
 
 .todo-form button:hover {
-  background-color: #e64a19; /* Deep retro orange */
+  background-color: #e64a19; 
 }
 
 .instructions {
@@ -95,15 +95,14 @@ body {
   align-items: center;
   margin-bottom: 0.8rem;
   padding: 0.5rem 0.8rem;
-  background: #ffe0b2; /* Light peach */
+  background: #ffe0b2; 
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  cursor: pointer; /* Makes the mouse pointer a cursor */
+  cursor: pointer; 
 }
 
 .todo-list li:hover {
-  background-color: #ffcc80; /* Muted orange hover effect */
-}
+  background-color: #ffcc80; /
 
 .todo-list li.completed span {
   text-decoration: line-through;
@@ -113,14 +112,14 @@ body {
 .todo-list li button {
   background: none;
   border: none;
-  color: #d32f2f; /* Retro red */
+  color: #d32f2f; 
   font-size: 0.9rem;
-  cursor: pointer; /* Keep pointer for delete button */
+  cursor: pointer; 
   transition: color 0.3s ease;
 }
 
 .todo-list li button:hover {
-  color: #b71c1c; /* Dark retro red */
+  color: #b71c1c; 
 }
 
 .filters {
@@ -132,8 +131,8 @@ body {
 .filters button {
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
-  background-color: #ff6f61; /* Retro coral */
-  color: #fff8e1; /* Soft cream */
+  background-color: #ff6f61; 
+  color: #fff8e1; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -141,7 +140,7 @@ body {
 }
 
 .filters button:hover {
-  background-color: #e64a19; /* Deep retro orange */
+  background-color: #e64a19; 
 }
 
 .contact-form {
@@ -150,7 +149,7 @@ body {
   padding: 2rem;
   max-width: 600px;
   margin: 2rem auto;
-  background: #fff8e1; /* Soft cream */
+  background: #fff8e1; 
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -160,7 +159,7 @@ body {
   margin-bottom: 1rem;
   padding: 0.8rem;
   font-size: 1rem;
-  border: 1px solid #ffab91; /* Light coral */
+  border: 1px solid #ffab91; 
   border-radius: 5px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease;
@@ -168,15 +167,15 @@ body {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #ff6f61; /* Retro coral */
+  border-color: #ff6f61; 
   outline: none;
 }
 
 .contact-form button {
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
-  background-color: #ff6f61; /* Retro coral */
-  color: #fff8e1; /* Soft cream */
+  background-color: #ff6f61; 
+  color: #fff8e1; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -184,5 +183,5 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #e64a19; /* Deep retro orange */
+  background-color: #e64a19; 
 }

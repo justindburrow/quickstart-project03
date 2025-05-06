@@ -5,7 +5,7 @@ const TodosView = ({ todos, addTodo, toggleTodo, deleteTodo }) => {
   const [filter, setFilter] = useState('all');
 
   const filteredTodos = todos
-    .map((todo, index) => ({ ...todo, originalIndex: index })) // Include the original index
+    .map((todo, index) => ({ ...todo, originalIndex: index })) 
     .filter((todo) => {
       if (filter === 'completed') return todo.completed;
       if (filter === 'incomplete') return !todo.completed;

@@ -28,13 +28,13 @@ const Todos = ({ todos, addTodo, toggleTodo, deleteTodo, setFilter }) => {
           <li
             key={todo.originalIndex}
             className={todo.completed ? 'completed' : ''}
-            onClick={() => toggleTodo(todo.originalIndex)} // Use the original index
+            onClick={() => toggleTodo(todo.originalIndex)} 
           >
             <span>{todo.text}</span>
             <button
               onClick={(e) => {
-                e.stopPropagation(); // Prevents the list item click from toggling the state
-                deleteTodo(todo.originalIndex); // Use the original index
+                e.stopPropagation(); 
+                deleteTodo(todo.originalIndex); 
               }}
             >
               Delete

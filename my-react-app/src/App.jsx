@@ -5,8 +5,7 @@ import ContactView from './views/ContactView';
 
 const App = () => {
   const [todos, setTodos] = useState([]);
-  const [currentView, setCurrentView] = useState('todos'); // State to track the current view
-
+  const [currentView, setCurrentView] = useState('todos'); 
   const addTodo = (text) => {
     setTodos([...todos, { text, completed: false }]);
   };
