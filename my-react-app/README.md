@@ -1,12 +1,10 @@
-# React + Vite
+Justin Burrow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a To Do List app with a contact page created for Quickstart Bootcamp Project 3.
 
-Currently, two official plugins are available:
+This project allows a user to enter and manage items on a to do list.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project was built using React and Vite and contains Javascript, HTML, and Css
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project could be improved in the future by saving a users to do list using the contact information, allowing useres to log in to access previous to do list, and adding a field to enter notes or more information about a to do list item.
+ 
